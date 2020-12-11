@@ -1,6 +1,7 @@
 var options = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
-var preguntas = ["¿Cómo se explican los procesos de enseñanza-aprendizaje como objeto del asesoramiento?", "¿Qué es la modalidad de intervención?", "¿Cómo se fundamenta la modalidad de intervención asistencial?", "¿Cuáles son los servicios que ofrecen información, asesoría y capacitación al personal del sistema educativo?", "¿Qué son y para qué sirven las políticas educativas?", "¿Cuáles son las modalidades de intervención?"];
+var preguntas = ["¿Cómo se explican los procesos de enseñanza-aprendizaje como objeto del asesoramiento?", "¿Qué es la modalidad de intervención?", "¿Cómo se fundamenta la modalidad de intervención asistencial?", "¿Cuáles son los servicios que ofrecen información, asesoría y capacitación al personal del sistema educativo?", "¿Qué son y para qué sirven las políticas educativas?", "¿Cuáles son las modalidades de intervención?"
+,"De que se encargan las unidades de servicio de apoyo a la educación regular? (USAER)", "¿Cuál es el principal aporte de Ausubel dentro del paradigma cognoscitivista?", "¿En qué consiste la teoría Bio ecológica?"];
 
 // Initialize Variables
 var inicioAngulo = 0;
@@ -49,7 +50,7 @@ function dibujarRuleta() {
     var textRadius = 160;
     var insideRadius = 125;
     optRuleta = canvas.getContext("2d");
-    optRuleta.clearRect(0, 0, 500, 500);
+    optRuleta.clearRect(0, 0, 3000, 500);
     optRuleta.strokeStyle = "white";
     optRuleta.lineWidth = 2;
     optRuleta.font = '14px Verdana, Arial';
@@ -117,9 +118,9 @@ function detenerRotacionRuleta() {
   var arcd = arc * 180 / Math.PI;
   var index = Math.floor((360 - degrees % 360) / arcd);
   optRuleta.save();
-  optRuleta.font = 'bold 10px Verdana, Arial';
-  var text = preguntas[Math.floor((Math.random() * (5 - 0 + 1)) + 0)];
-  optRuleta.fillText(text, 250 - optRuleta.measureText(text).width / 2, 250 + 10);
+  optRuleta.font = 'bold 15px Verdana, Arial';
+  var text = preguntas[Math.floor((Math.random() * (8 - 0 + 1)) + 0)];
+  optRuleta.fillText(text, 1 , 465 + 10);
 
 }
 
